@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+
+
+        :root {
+            --primary-green: #29ca2e;
+            --dark-accent: #2c3e50;
+            --light-bg: #f4f4f4;
+        }
+
+
+
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+
+
+        header {
+            background-color: var(--primary-green);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem 0;
+        }
+
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+
+        .logo {
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            padding: 1rem 0;
+        }
+
+
+
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+
+        .nav-links a:hover {
+            background-color: var(--dark-accent);
+            transform: translateY(-2px);
+        }
+
+
+       
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+            url('https://media-hosting.imagekit.io//621820d575f84f22/Messenger_creation_FF8F4F49-BFD1-4702-B5CB-AA4E8B491DBD.jpeg?Expires=1835009989&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=KF3vqiEuj0hmBF4b4M2nQgrdlXe5rjLZHq7qISl5RLQ955Xa0BOnPAFXeBOIElli~GvRGbKrUJidyRnNcS7UdDdwz8ISyZPUX~cm85H27qIagK6tzmgL~4vJdZ9~z0arrLeGmlf73fOvoPpB~QM61Xdg6KSmyPyc-GmJpELIjqCm5uyGX5XmOHHP7P~egAfaM9FvVsQtAhRYqHX5~dS5tZAc0jgnWC8eMlg3U28FzP79IN~PFGF5sIJYYAqBEi1W8IfnSbROJXDd541vzoTGN3OHb9tBqIrTIkRHc0iKHauDSJauroEy6Ow9JeJMoovAIK2LQVchrYd4LKLvwQXomQ__') center/cover fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+
+        .hero-content {
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: slideIn 1s ease-out;
+        }
+
+
+        .hero .subtitle {
+            font-size: 1.8rem;
+            animation: fadeInUp 1s ease-out 0.5s backwards;
+        }
+
+
+     
+        .introduction {
+            padding: 5rem 2rem;
+            background: white;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out 1s forwards;
+        }
+
+
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 2rem;
+            background: var(--light-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+
+     
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+
+     
+        footer {
+            background-color: var(--primary-green);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: auto;
+        }
+
+
+     
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+           
+            .hero .subtitle {
+                font-size: 1.3rem;
+            }
+           
+            .introduction {
+                padding: 3rem 1rem;
+            }
+
+
+            .logo {
+                font-size: 1.8rem;
+            }
+
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="logo">Outreach Activity</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donations.html">Donations</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>A Day of Kindness and Compassion</h1>
+                <p class="subtitle">Supporting Orphans at St. Maria de Matias Center, Inc.</p>
+            </div>
+        </section>
+
+
+        <section class="introduction">
+            <div class="intro-content">
+                <h2>Summary of the program</h2>
+                <p>The students of Marist from 9-St. Paul selected St. Maria de Matthias as the site for their outreach program, which was part of their PT in AP and RELIGION. Through careful planning over a month, we created engaging activities that provided both educational value and joyful experiences for the children, fostering meaningful connections between our students and the community.</p>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 Community Outreach Program | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
